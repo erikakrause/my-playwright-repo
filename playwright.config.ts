@@ -2,8 +2,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: 'tests',
-  // aumentar timeouts globais
-  timeout: 15000, // per-test timeout (15s)
+  timeout: 15000,
   expect: { timeout: 10000 },
   use: {
     baseURL: 'https://www.saucedemo.com',
@@ -14,7 +13,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chrome',
-      use: { channel: 'chrome', headless: false }
+      use: { channel: 'chrome', headless: true }
     },
     {
       name: 'chromium',
